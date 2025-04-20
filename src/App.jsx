@@ -4,6 +4,7 @@ import Header from './components/Header'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navabar';
 import Home from './pages/Home';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
 
         </Routes>
       </BrowserRouter>
-
+    <Footer/>
     </>
   )
 }

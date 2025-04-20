@@ -7,6 +7,17 @@ import imgOne from '../assets/img1.png'
 import imgTwo from '../assets/img2.png'
 import imgThree from '../assets/img3.png'
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import picOne from '../assets/pic1.png'
+import picTwo from '../assets/picTwo.png'
+import picThree from '../assets/pic3.png'
+import picFour from '../assets/pic4.png'
+import Image from '../assets/image.png'
+import book from '../assets/book.png'
+import artOne from '../assets/articleOne.png'
+import artTwo from '../assets/artTwo.png'
+import artThree from '../assets/art3.png'
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+
 
 
 function Home() {
@@ -33,7 +44,7 @@ function Home() {
                 marginTop: "20px",
                 width: "100%",
                 height: "500px",
-                background: "linear-gradient(to right, #FFD9A0, #FFFFFF)"
+                background: "#FCEBEA"
             }}>
 
                 <div className="row">
@@ -53,7 +64,7 @@ function Home() {
                 style={{
                     marginTop: "40px",
                     height: "400px",
-                    background: 'linear-gradient(to right, #FFD9A0, #FFFFFF)',
+                    background: '#FCEBEA',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -136,6 +147,226 @@ function Home() {
 
             </div>
 
+            <button style={{ marginLeft: "700px", marginTop: "30px", width: "200px" }} className='btn btn-outline-dark p-3'>VIEW MORE <i class="fa-solid fa-arrow-right ms-2"></i></button>
+
+
+            {/* Release Section */}
+
+
+            <div style={{
+                background: '#FCEBEA',
+                textAlign: 'center',
+                padding: '50px',
+                fontSize: '24px',
+                fontWeight: 'bold',
+                marginTop: "20px",
+                height: "600px"
+            }}>
+                New Release Projects
+
+                <div style={{ marginTop: "100px", gap: "30px" }} className='d-flex justify-content-center align-items-center'>
+
+                    <div className='d-flex flex-column align-items-center'>
+                        <Card style={{ width: '18rem', position: 'relative' }}>
+                            <Card.Img variant="top" src={picOne} />
+
+                            {/* Overlay Button */}
+                            <button
+                                style={{
+                                    position: 'absolute',
+                                    bottom: '10px',
+                                    left: '50%',
+                                    transform: 'translateX(-50%)',
+                                    backgroundColor: 'red',
+                                    color: 'white',
+                                    padding: '5px',
+                                    border: 'none',
+                                    borderRadius: '5px',
+                                    width: '80%',
+                                }}
+                            >
+                                Add to Cart
+                            </button>
+                        </Card>
+
+                        <h5 className='mt-2'>Spam Filtering</h5>
+                        <h6 className="dimmed-heading">AI Project</h6>
+                        <span style={{ color: "red", fontSize: "20px" }}>1500 rs</span>
+                    </div>
+
+
+                    <div className='d-flex flex-column align-items-center'>
+                        <Card style={{ width: '15rem' }}>
+                            <Card.Img variant="top" src={picTwo} />
+                        </Card>
+                        <h5 className='mt-2'>Face Recognition</h5>
+                        <h6 class="dimmed-heading">AI Project</h6>
+                        <span style={{ color: "red", fontSize: "20px" }}>3000 rs</span>
+                    </div>
+
+                    <div className='d-flex flex-column align-items-center'>
+                        <Card style={{ width: '10rem' }}>
+                            <Card.Img variant="top" src={picThree} />
+                        </Card>
+                        <h5 className='mt-2'>Online Food Delivery</h5>
+                        <h6 class="dimmed-heading">AI Project</h6>
+                        <span style={{ color: "red", fontSize: "20px" }}>3000 rs</span>
+                    </div>
+
+                    <div className='d-flex flex-column align-items-center'>
+                        <Card style={{ width: '15rem' }}>
+                            <Card.Img variant="top" src={picFour} />
+                        </Card>
+                        <h5 className='mt-2'>Text To Speech Converter</h5>
+                        <h6 class="dimmed-heading">AI Project</h6>
+                        <span style={{ color: "red", fontSize: "20px" }}>1500 rs</span>
+                    </div>
+
+                </div>
+                <h4 style={{ marginTop: "80px", marginLeft: "900px", color: "red" }}>View All  products</h4>
+            </div>
+
+
+
+            {/* featured projects section */}
+
+            <div style={{
+                textAlign: 'center',
+                padding: '50px',
+                fontSize: '50px',
+                fontWeight: 'bold',
+                marginTop: "20px",
+                height: "600px"
+            }}>
+                Featured Projects
+
+                <div className="row mt-5">
+                    <div className="col-6 d-flex justify-content-center ">
+                        <img className='img-fluid' width="75%" src={Image} alt="" />
+                    </div>
+                    <div className="col-6">
+                        <div className="text-center">
+                            <h3 style={{ marginLeft: "-370px" }}>Online Food Delivery System</h3>
+                            <hr style={{ width: "130px", border: "2px solid red", marginLeft: "30px", marginTop: "50px" }} />
+                            <h5 style={{ fontSize: "10px", marginLeft: "-600px" }}>WEB DEVELOPER PROJECT</h5>
+                            <p style={{ fontSize: "16px", textAlign: "justify", padding: "10px 30px" }}>
+                                Looking to create a food delivery system website for your eatery? Well, look no further with our food delivery system kit. Any changes necessary can be made to cater to your needs. Also comes with 24/7 support from us.
+                            </p>
+                            <span style={{ color: "red", fontSize: "20px", marginLeft: "-650px" }}>3000 rs</span>
+
+                        </div>
+                        <button style={{ marginLeft: "-600px", padding: "15px" }} className='btn btn-outline-dark'>View More <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+            </div>
+
+
+            {/* book section */}
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: "200px"
+            }}>
+                <div style={{
+                    backgroundColor: '#FCEBEA',
+                    width: '85%',
+                    height: '500px'
+                }}>
+                    <div className="row">
+                        <div className="col">
+                            <p style={{ marginLeft: "200px", marginTop: "100px", fontSize: "40px" }}>All books are 50% off now!<br />
+                                Don't miss such a deal!</p>
+                            <p style={{ textAlign: "justify", marginLeft: "190px", marginRight: "30px" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos odit, modi necessitatibus totam harum adipisci quo, facilis.</p>
+
+                            <div style={{ gap: "20px" }} className='d-flex justify-content-center align-items-center'>
+                                <div> <span style={{ color: 'red', fontSize: "20px" }}>768</span> <br /> DAYS</div>
+                                <div><span style={{ color: 'red', fontSize: "20px" }}>01</span> <br />HOURS</div>
+                                <div><span style={{ color: 'red', fontSize: "20px" }}>27</span> <br />MINT</div>
+                                <div><span style={{ color: 'red', fontSize: "20px" }}>65</span> <br />SEC</div>
+                            </div>
+
+                        </div>
+                        <div className="col">
+                            <img style={{ marginTop: "80px" }} className='img-fluid' src={book} alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* article section */}
+            <div style={{
+                marginTop: "100px"
+            }}>
+                <h1 style={{ marginLeft: "700PX" }}> Latest Articles</h1>
+
+
+                <div className='d-flex justify-content-center align-items-center mt-5 gap-5'>
+
+                    <div>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={artOne} />
+                            <Card.Body>
+                                <span style={{ color: "#926F34" }}>2 Aug, 2021</span>
+                                <Card.Text>
+                                    Reading Books Always Makes The Moments Happy
+                                </Card.Text>
+
+                                {/* Social Icons - aligned to the right */}
+                                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
+                                    <FaFacebookF style={{ cursor: 'pointer', color: '#3b5998' }} />
+                                    <FaTwitter style={{ cursor: 'pointer', color: '#1da1f2' }} />
+                                    <FaInstagram style={{ cursor: 'pointer', color: '#e1306c' }} />
+                                </div>
+                            </Card.Body>
+                        </Card>
+                    </div>
+
+
+                    <div>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={artTwo} />
+                            <Card.Body>
+                                <span style={{ color: "#926F34" }}>2 Aug, 2021</span>
+                                <Card.Text>
+                                    Reading Books Always Makes The Moments Happy
+                                </Card.Text>
+
+                                {/* Social Icons - aligned to the right */}
+                                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
+                                    <FaFacebookF style={{ cursor: 'pointer', color: '#3b5998' }} />
+                                    <FaTwitter style={{ cursor: 'pointer', color: '#1da1f2' }} />
+                                    <FaInstagram style={{ cursor: 'pointer', color: '#e1306c' }} />
+                                </div>
+                            </Card.Body>
+                        </Card>
+                    </div>
+
+
+                    <div>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={artThree} />
+                            <Card.Body>
+                                <span style={{ color: "#926F34" }}>2 Aug, 2021</span>
+                                <Card.Text>
+                                    Reading Books Always Makes The Moments Happy
+                                </Card.Text>
+
+                                {/* Social Icons - aligned to the right */}
+                                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
+                                    <FaFacebookF style={{ cursor: 'pointer', color: '#3b5998' }} />
+                                    <FaTwitter style={{ cursor: 'pointer', color: '#1da1f2' }} />
+                                    <FaInstagram style={{ cursor: 'pointer', color: '#e1306c' }} />
+                                </div>
+                            </Card.Body>
+                        </Card>
+                    </div>
+
+                </div>
+
+                <button style={{ marginLeft: "700px", marginTop: "100px" }} className='btn btn-outline-dark p-2'>READ ALL ARTICLES <i class="fa-solid fa-arrow-right ms-2"></i></button>
+
+            </div>
         </>
     )
 }

@@ -35,3 +35,16 @@
     white-space: nowrap;
   }
   
+
+  /* card */
+  .dimmed-heading {
+    font-size: 1rem;
+    color: #999999; 
+    opacity: 0.6;
+    font-weight: 500;
+    cursor: not-allowed;
+    
+  }
+
+  
+  
