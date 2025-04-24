@@ -7,7 +7,7 @@ function Footer() {
     return (
         <>
 
-            <div style={{ backgroundColor: "#ED553B", height: "500px", marginTop: "60px" }}>
+            <div style={{ backgroundColor: "#ED553B", height: "500px"}}>
 
                 <div>
                     <div className="row">
@@ -69,23 +69,23 @@ function Footer() {
                 </div>
 
                 <footer className='container' style={{
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      padding: '10px 20px',
-     marginTop:"40px",
-      fontSize: '14px',
-      color: 'white',
-      marginLeft:"140px"
-    }}>
-      <div>
-        © 2022 Arihant. All Rights Reserved.
-      </div>
-      <div>
-        <a href="#" style={{ color: 'white', textDecoration: 'none', margin: '0 5px', fontSize:"20px" }}>Privacy</a> |
-        <a href="#" style={{ color: 'white', textDecoration: 'none', margin: '0 5px', fontSize:"20px" }}>Terms of Service</a>
-      </div>
-    </footer>
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    padding: '10px 20px',
+                    marginTop: "40px",
+                    fontSize: '14px',
+                    color: 'white',
+                    marginLeft: "140px"
+                }}>
+                    <div>
+                        © 2022 Arihant. All Rights Reserved.
+                    </div>
+                    <div>
+                        <a href="#" style={{ color: 'white', textDecoration: 'none', margin: '0 5px', fontSize: "20px" }}>Privacy</a> |
+                        <a href="#" style={{ color: 'white', textDecoration: 'none', margin: '0 5px', fontSize: "20px" }}>Terms of Service</a>
+                    </div>
+                </footer>
             </div>
 
         </>

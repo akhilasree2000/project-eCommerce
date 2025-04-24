@@ -17,6 +17,7 @@ import artOne from '../assets/articleOne.png'
 import artTwo from '../assets/artTwo.png'
 import artThree from '../assets/art3.png'
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import Footer from '../components/Footer';
 
 
 
@@ -367,6 +368,7 @@ function Home() {
                 <button style={{ marginLeft: "700px", marginTop: "100px" }} className='btn btn-outline-dark p-2'>READ ALL ARTICLES <i class="fa-solid fa-arrow-right ms-2"></i></button>
 
             </div>
+            <Footer/>
         </>
     )
 }

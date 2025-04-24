@@ -1,5 +1,6 @@
 import React from "react";
 import { FaSearch, FaUser, FaShoppingCart, FaHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -25,10 +26,10 @@ const Navbar = () => {
                             {/* Inner grey circle */}
                             <div
                                 style={{
-                                    width: "60px",  // Inner circle size
-                                    height: "60px",  // Inner circle size
-                                    borderRadius: "50%", // Perfect circle
-                                    backgroundColor: "grey", // Inner circle color
+                                    width: "60px",  
+                                    height: "60px", 
+                                    borderRadius: "50%", 
+                                    backgroundColor: "grey",
                                 }}
                             ></div>
                         </div>
@@ -38,9 +39,9 @@ const Navbar = () => {
                     </div>
 
                     {/* Center - Menu Links with Dividers */}
-                    <span style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer", marginLeft: "30px", color: "red" }}>
+                    <Link to={'/'} style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer", marginLeft: "30px", color: "red", textDecoration:"none"}}>
                         HOME
-                    </span>
+                    </Link>
                     <div
                         style={{
                             height: "20px",
@@ -49,9 +50,9 @@ const Navbar = () => {
                             margin: "0 15px",
                         }}
                     ></div>
-                    <span style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer" }}>
+                    <Link to={'/about'} style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer", textDecoration:"none" }}>
                         ABOUT US
-                    </span>
+                    </Link>
                     <div
                         style={{
                             height: "20px",
@@ -60,9 +61,9 @@ const Navbar = () => {
                             margin: "0 15px",
                         }}
                     ></div>
-                    <span style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer" }}>
+                    <Link to={'/projects'} style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer", textDecoration:"none" }}>
                         Projects
-                    </span>
+                    </Link>
                     <div
                         style={{
                             height: "20px",
@@ -71,9 +72,9 @@ const Navbar = () => {
                             margin: "0 15px",
                         }}
                     ></div>
-                    <span style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer" }}>
+                    <Link to={'/release'} style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer" , textDecoration:"none"}}>
                         NEW RELEASE
-                    </span>
+                    </Link>
                     <div
                         style={{
                             height: "20px",
@@ -82,9 +83,9 @@ const Navbar = () => {
                             margin: "0 15px",
                         }}
                     ></div>
-                    <span style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer" }}>
+                    <Link to={'/contact'} style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer" }}>
                         CONTACT US
-                    </span>
+                    </Link>
                     <div
                         style={{
                             height: "20px",
@@ -93,9 +94,9 @@ const Navbar = () => {
                             margin: "0 15px",
                         }}
                     ></div>
-                    <span style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer" }}>
+                    <Link to={'/blog'} style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer" }}>
                         BLOG
-                    </span>
+                    </Link>
                 </div>
 
                 {/* Right - Icons with Dividers */}

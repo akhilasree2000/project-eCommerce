@@ -4,7 +4,8 @@ import Header from './components/Header'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navabar';
 import Home from './pages/Home';
-import Footer from './components/Footer';
+import Projects from './pages/Projects';
+import PayementSuccesssfull from './pages/PayementSuccesssfull';
 
 
 function App() {
@@ -19,10 +20,11 @@ function App() {
         <Routes>
           {/* <Route path='/navbar' element={<Navbar/>}/> */}
           <Route path='/' element={<Home />} />
-
+          <Route path='/projects' element={<Projects/>}/>
+          <Route path='/payment' element={<PayementSuccesssfull/>}/>
         </Routes>
       </BrowserRouter>
-    <Footer/>
+  
     </>
   )
 }
