@@ -6,6 +6,7 @@ import Navbar from './components/Navabar';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import PayementSuccesssfull from './pages/PayementSuccesssfull';
+import SignPage from './pages/SignPage';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/projects' element={<Projects/>}/>
           <Route path='/payment' element={<PayementSuccesssfull/>}/>
+          <Route path='/sign' element={<SignPage/>}/>
         </Routes>
       </BrowserRouter>
   

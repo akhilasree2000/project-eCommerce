@@ -135,3 +135,28 @@
     font-weight: 600;
   }
   
+
+
+
+  /*  Login Page */
+.login-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+.orange-line {
+  border-top: 5px solid orange;
+}
+
+.otp-text {
+  font-size: 16px;
+  color: #555;
+}
+
+.form-heading {
+  margin-bottom: 20px;
+  margin-left: 50px;
+}

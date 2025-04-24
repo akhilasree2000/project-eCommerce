@@ -5,126 +5,72 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-white shadow-sm py-3 px-4">
-            <div className="container d-flex justify-content-between align-items-center">
+            <div className="container-fluid">
+                {/* Brand and toggle */}
                 <div className="d-flex align-items-center">
-
-                    {/* Left - Circle and Search Icon */}
-                    <div className="d-flex align-items-center">
-                        {/* Outer black circle */}
+                    {/* Outer black circle */}
+                    <div
+                        style={{
+                            width: "80px",
+                            height: "80px",
+                            borderRadius: "50%",
+                            backgroundColor: "grey",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            marginRight: "10px",
+                        }}
+                    >
+                        {/* Inner grey circle */}
                         <div
                             style={{
-                                width: "80px",
-                                height: "80px",
+                                width: "60px",
+                                height: "60px",
                                 borderRadius: "50%",
                                 backgroundColor: "grey",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                marginRight: "10px",
                             }}
-                        >
-                            {/* Inner grey circle */}
-                            <div
-                                style={{
-                                    width: "60px",  
-                                    height: "60px", 
-                                    borderRadius: "50%", 
-                                    backgroundColor: "grey",
-                                }}
-                            ></div>
-                        </div>
-
-                        {/* Search Icon */}
-                        <FaSearch size={18} style={{ color: "#000", cursor: "pointer", marginLeft: "10px" }} />
+                        ></div>
                     </div>
 
-                    {/* Center - Menu Links with Dividers */}
-                    <Link to={'/'} style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer", marginLeft: "30px", color: "red", textDecoration:"none"}}>
-                        HOME
-                    </Link>
-                    <div
-                        style={{
-                            height: "20px",
-                            width: "1px",
-                            backgroundColor: "black",
-                            margin: "0 15px",
-                        }}
-                    ></div>
-                    <Link to={'/about'} style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer", textDecoration:"none" }}>
-                        ABOUT US
-                    </Link>
-                    <div
-                        style={{
-                            height: "20px",
-                            width: "1px",
-                            backgroundColor: "black",
-                            margin: "0 15px",
-                        }}
-                    ></div>
-                    <Link to={'/projects'} style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer", textDecoration:"none" }}>
-                        Projects
-                    </Link>
-                    <div
-                        style={{
-                            height: "20px",
-                            width: "1px",
-                            backgroundColor: "black",
-                            margin: "0 15px",
-                        }}
-                    ></div>
-                    <Link to={'/release'} style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer" , textDecoration:"none"}}>
-                        NEW RELEASE
-                    </Link>
-                    <div
-                        style={{
-                            height: "20px",
-                            width: "1px",
-                            backgroundColor: "black",
-                            margin: "0 15px",
-                        }}
-                    ></div>
-                    <Link to={'/contact'} style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer" }}>
-                        CONTACT US
-                    </Link>
-                    <div
-                        style={{
-                            height: "20px",
-                            width: "1px",
-                            backgroundColor: "black",
-                            margin: "0 15px",
-                        }}
-                    ></div>
-                    <Link to={'/blog'} style={{ fontSize: "15px", fontWeight: "500", cursor: "pointer" }}>
-                        BLOG
-                    </Link>
+                    {/* Toggler Button */}
+                    <button
+                        className="navbar-toggler ms-2"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent"
+                        aria-controls="navbarContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
                 </div>
 
-                {/* Right - Icons with Dividers */}
-                <div className="d-flex align-items-center">
-                    <div style={{ color: "#000", cursor: "pointer" }}>
-                        <FaUser />
+                {/* Collapsible content */}
+                <div className="collapse navbar-collapse justify-content-between" id="navbarContent">
+                    {/* Left - Menu Links */}
+                    <div className="navbar-nav d-flex flex-wrap align-items-center mt-3 mt-lg-0">
+                        <FaSearch size={18} style={{ color: "#000", cursor: "pointer", marginRight: "15px" }} />
+                        <Link to="/" className="nav-link fw-medium text-danger px-2">HOME</Link>
+                        <span className="vr mx-2"></span>
+                        <Link to="/about" className="nav-link fw-medium px-2">ABOUT US</Link>
+                        <span className="vr mx-2"></span>
+                        <Link to="/projects" className="nav-link fw-medium px-2">Projects</Link>
+                        <span className="vr mx-2"></span>
+                        <Link to="/release" className="nav-link fw-medium px-2">NEW RELEASE</Link>
+                        <span className="vr mx-2"></span>
+                        <Link to="/contact" className="nav-link fw-medium px-2">CONTACT US</Link>
+                        <span className="vr mx-2"></span>
+                        <Link to="/blog" className="nav-link fw-medium px-2">BLOG</Link>
                     </div>
-                    <div
-                        style={{
-                            height: "20px",
-                            width: "1px",
-                            backgroundColor: "black",
-                            margin: "0 15px",
-                        }}
-                    ></div>
-                    <div style={{ color: "#000", cursor: "pointer" }}>
-                        <FaShoppingCart />
-                    </div>
-                    <div
-                        style={{
-                            height: "20px",
-                            width: "1px",
-                            backgroundColor: "black",
-                            margin: "0 15px",
-                        }}
-                    ></div>
-                    <div style={{ color: "#000", cursor: "pointer" }}>
-                        <FaHeart />
+
+                    {/* Right - Icons */}
+                    <div className="d-flex align-items-center mt-3 mt-lg-0">
+                        <FaUser style={{ color: "#000", cursor: "pointer" }} />
+                        <span className="vr mx-3"></span>
+                        <FaShoppingCart style={{ color: "#000", cursor: "pointer" }} />
+                        <span className="vr mx-3"></span>
+                        <FaHeart style={{ color: "#000", cursor: "pointer" }} />
                     </div>
                 </div>
             </div>

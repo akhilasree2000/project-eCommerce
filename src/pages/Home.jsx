@@ -18,359 +18,179 @@ import artTwo from '../assets/artTwo.png'
 import artThree from '../assets/art3.png'
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import Footer from '../components/Footer';
+import '../App.css'
 
 
+
+// Your imports remain the same
 
 function Home() {
     return (
         <>
-
             <Navbar />
 
-            <div style={{
-                height: "25px",
-                width: "100%",
-                backgroundColor: "#a9a9a9",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: "15px"
-            }}>
-                <i class="fa-solid fa-house"></i>
+            <div className="d-flex justify-content-center align-items-center gap-3 bg-secondary text-white" style={{ height: "25px" }}>
+                <i className="fa-solid fa-house"></i>
                 HOME
             </div>
 
-
-            <div style={{
-                marginTop: "20px",
-                width: "100%",
-                height: "500px",
-                background: "#FCEBEA"
-            }}>
-
-                <div className="row">
-                    <div style={{ marginTop: "80px" }} className="col-6">
-                        <h2 style={{ color: "#0A2472", marginLeft: "300px" }}>Looking For Your Next Project?</h2>
-                        <h5 style={{ color: "#123499", marginLeft: "300px", marginTop: "20px", textAlign: "justify", lineHeight: "1.8" }}>Check out the wide variety of projects in our <br /> database. Projects from all fields are available.</h5>
-                        <button style={{ marginLeft: "300px", marginTop: "70px" }} className='btn btn-outline-dark'>Read More <i style={{ padding: '10px' }} class="fa-solid fa-arrow-right"></i></button>
-
+            <div className="w-100 bg-light" style={{ marginTop: "20px", height: "auto" }}>
+                <div className="row container mx-auto py-5">
+                    <div className="col-12 col-md-6 text-center text-md-start my-auto">
+                        <h2 className="text-primary">Looking For Your Next Project?</h2>
+                        <h5 className="text-info mt-3 lh-base">Check out the wide variety of projects in our <br /> database. Projects from all fields are available.</h5>
+                        <button className='btn btn-outline-dark mt-5'>Read More <i className="fa-solid fa-arrow-right ps-2"></i></button>
                     </div>
-                    <div className="col-6" style={{ marginTop: "90px", borderRadius: "40px" }}><img className='img-fluid' width="300px" src={projImg} alt="" /></div>
-                </div>
-            </div>
-
-
-            {/* third section */}
-            <div
-                style={{
-                    marginTop: "40px",
-                    height: "400px",
-                    background: '#FCEBEA',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                }}
-            >
-                <div
-                    style={{
-                        width: '1500px',
-                        height: '300px',
-                        marginTop: "-100px",
-                        backgroundColor: '#FF6347',
-                        borderRadius: '10px',
-                    }}
-                >
-
-                    <h1 style={{ marginLeft: "400px", marginTop: "60px", fontSize: "50px", color: "white" }}>SEARCH YOUR PROJECT</h1>
-                    <h4 style={{ marginLeft: "300px", marginTop: "40px", color: "white" }}>Looking for something specific? Look it up in our vast library  of projects.</h4>
-
-                    <div style={{ marginLeft: "500px", marginTop: "70px" }} className="search-container">
-                        <FaSearch className="search-icon" />
-                        <input style={{ padding: "20px" }} type="text" className="search-input" />
-                        <button style={{ width: "200px", fontSize: "20px" }} className="right-box">SEARCH</button>
+                    <div className="col-12 col-md-6 text-center mt-4 mt-md-0">
+                        <img className='img-fluid' width="300px" src={projImg} alt="" />
                     </div>
                 </div>
             </div>
 
-
-
-            {/* fourth section */}
-
-            <div
-                style={{ marginTop: "40px", marginBottom: "-100px" }}
-                className="container d-flex align-items-center justify-content-between w-full p-4 bg-white shadow-md rounded-xl"
-            >
-                {/* Left Side */}
-                <div className="flex items-center space-x-3">
-                    <div className="w-1 h-10 bg-orange-500 rounded"></div>
-                    <span style={{ marginLeft: "200px", color: "#FF6347", fontSize: "20px" }} className="text-lg font-semibold">Categories</span>
+            <div className="d-flex justify-content-center align-items-center bg-light py-5">
+                <div className="bg-danger text-white rounded p-4 w-100 mx-3 mx-md-5 text-center">
+                    <h1 className="display-5">SEARCH YOUR PROJECT</h1>
+                    <h4 className="mt-3 ">Looking for something specific? Look it up in our vast library of projects.</h4>
+                    <div className="d-flex justify-content-center mt-4 flex-wrap gap-2">
+                        <FaSearch className="align-self-center" />
+                        <input type="text" className="form-control w-50" placeholder="Search..." />
+                        <button className="btn btn-light">SEARCH</button>
+                    </div>
                 </div>
-
-                {/* Right Side */}
-                <div className="flex items-center space-x-4">
-                    {/* Left Arrow */}
-                    <ArrowLeft className="text-black cursor-pointer hover:scale-110 transition-transform" />
-
-                    {/* Right Arrow styled like Left, with yellow color */}
-                    <ArrowRight style={{ backgroundColor: "#FF6347", color: "white", marginLeft: "30px" }} className="text-yellow-500 cursor-pointer hover:scale-110 transition-transform" />
-                </div>
-
             </div>
 
+            <div className="container d-flex justify-content-between align-items-center flex-wrap py-4 bg-white shadow rounded">
+                <div className="d-flex align-items-center mb-2 mb-md-0">
+                    <div className="bg-warning" style={{ width: "5px", height: "40px" }}></div>
+                    <span className="ms-3 text-danger fs-5">Categories</span>
+                </div>
+                <div className="d-flex gap-4">
+                    <ArrowLeft className="text-dark cursor-pointer" />
+                    <ArrowRight className="text-white bg-danger rounded p-1" />
+                </div>
+            </div>
 
-
-            <div style={{ marginLeft: "400px", marginTop: "100px", marginBottom: "-50px" }}>
+            <div className="text-center mt-5">
                 <h1>Explore Our Top Categories</h1>
             </div>
 
-            <div style={{ marginTop: "100px", gap: "30px" }} className='d-flex justify-content-center align-items-center'>
-
-                <div className='d-flex flex-column align-items-center'>
+            <div className='d-flex justify-content-center align-items-center flex-wrap gap-4 mt-5'>
+                <div className='text-center'>
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={imgOne} />
                     </Card>
                     <h5 className='mt-2'>AL & ML</h5>
                 </div>
 
-                <div className='d-flex flex-column align-items-center'>
+                <div className='text-center'>
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={imgTwo} />
                     </Card>
                     <h5 className='mt-2'>Web Development</h5>
                 </div>
 
-                <div className='d-flex flex-column align-items-center'>
+                <div className='text-center'>
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={imgThree} />
                     </Card>
                     <h5 className='mt-2'>Electronics Engineering</h5>
                 </div>
-
             </div>
 
-            <button style={{ marginLeft: "700px", marginTop: "30px", width: "200px" }} className='btn btn-outline-dark p-3'>VIEW MORE <i class="fa-solid fa-arrow-right ms-2"></i></button>
-
-
-            {/* Release Section */}
-
-
-            <div style={{
-                background: '#FCEBEA',
-                textAlign: 'center',
-                padding: '50px',
-                fontSize: '24px',
-                fontWeight: 'bold',
-                marginTop: "20px",
-                height: "600px"
-            }}>
-                New Release Projects
-
-                <div style={{ marginTop: "100px", gap: "30px" }} className='d-flex justify-content-center align-items-center'>
-
-                    <div className='d-flex flex-column align-items-center'>
-                        <Card style={{ width: '18rem', position: 'relative' }}>
-                            <Card.Img variant="top" src={picOne} />
-
-                            {/* Overlay Button */}
-                            <button
-                                style={{
-                                    position: 'absolute',
-                                    bottom: '10px',
-                                    left: '50%',
-                                    transform: 'translateX(-50%)',
-                                    backgroundColor: 'red',
-                                    color: 'white',
-                                    padding: '5px',
-                                    border: 'none',
-                                    borderRadius: '5px',
-                                    width: '80%',
-                                }}
-                            >
-                                Add to Cart
-                            </button>
-                        </Card>
-
-                        <h5 className='mt-2'>Spam Filtering</h5>
-                        <h6 className="dimmed-heading">AI Project</h6>
-                        <span style={{ color: "red", fontSize: "20px" }}>1500 rs</span>
-                    </div>
-
-
-                    <div className='d-flex flex-column align-items-center'>
-                        <Card style={{ width: '15rem' }}>
-                            <Card.Img variant="top" src={picTwo} />
-                        </Card>
-                        <h5 className='mt-2'>Face Recognition</h5>
-                        <h6 class="dimmed-heading">AI Project</h6>
-                        <span style={{ color: "red", fontSize: "20px" }}>3000 rs</span>
-                    </div>
-
-                    <div className='d-flex flex-column align-items-center'>
-                        <Card style={{ width: '10rem' }}>
-                            <Card.Img variant="top" src={picThree} />
-                        </Card>
-                        <h5 className='mt-2'>Online Food Delivery</h5>
-                        <h6 class="dimmed-heading">AI Project</h6>
-                        <span style={{ color: "red", fontSize: "20px" }}>3000 rs</span>
-                    </div>
-
-                    <div className='d-flex flex-column align-items-center'>
-                        <Card style={{ width: '15rem' }}>
-                            <Card.Img variant="top" src={picFour} />
-                        </Card>
-                        <h5 className='mt-2'>Text To Speech Converter</h5>
-                        <h6 class="dimmed-heading">AI Project</h6>
-                        <span style={{ color: "red", fontSize: "20px" }}>1500 rs</span>
-                    </div>
-
-                </div>
-                <h4 style={{ marginTop: "80px", marginLeft: "900px", color: "red" }}>View All  products</h4>
+            <div className="text-center mt-4">
+                <button className='btn btn-outline-dark'>VIEW MORE <i className="fa-solid fa-arrow-right ms-2"></i></button>
             </div>
 
+            <div className="bg-light py-5 text-center">
+                <h2 className="fw-bold">New Release Projects</h2>
 
-
-            {/* featured projects section */}
-
-            <div style={{
-                textAlign: 'center',
-                padding: '50px',
-                fontSize: '50px',
-                fontWeight: 'bold',
-                marginTop: "20px",
-                height: "600px"
-            }}>
-                Featured Projects
-
-                <div className="row mt-5">
-                    <div className="col-6 d-flex justify-content-center ">
-                        <img className='img-fluid' width="75%" src={Image} alt="" />
-                    </div>
-                    <div className="col-6">
-                        <div className="text-center">
-                            <h3 style={{ marginLeft: "-370px" }}>Online Food Delivery System</h3>
-                            <hr style={{ width: "130px", border: "2px solid red", marginLeft: "30px", marginTop: "50px" }} />
-                            <h5 style={{ fontSize: "10px", marginLeft: "-600px" }}>WEB DEVELOPER PROJECT</h5>
-                            <p style={{ fontSize: "16px", textAlign: "justify", padding: "10px 30px" }}>
-                                Looking to create a food delivery system website for your eatery? Well, look no further with our food delivery system kit. Any changes necessary can be made to cater to your needs. Also comes with 24/7 support from us.
-                            </p>
-                            <span style={{ color: "red", fontSize: "20px", marginLeft: "-650px" }}>3000 rs</span>
-
+                <div className='d-flex justify-content-center align-items-center flex-wrap gap-4 mt-5'>
+                    {[
+                        { img: picOne, title: 'Spam Filtering', price: '1500 rs' },
+                        { img: picTwo, title: 'Face Recognition', price: '3000 rs' },
+                        { img: picThree, title: 'Online Food Delivery', price: '3000 rs' },
+                        { img: picFour, title: 'Text To Speech Converter', price: '1500 rs' }
+                    ].map((item, index) => (
+                        <div key={index} className='text-center'>
+                            <Card style={{ width: '15rem', position: 'relative' }}>
+                                <Card.Img variant="top" src={item.img} />
+                                {index === 0 && (
+                                    <button className="btn btn-danger position-absolute start-50 translate-middle-x bottom-0 mb-2 w-75">
+                                        Add to Cart
+                                    </button>
+                                )}
+                            </Card>
+                            <h5 className='mt-2'>{item.title}</h5>
+                            <h6 className="text-muted">AI Project</h6>
+                            <span className="text-danger fs-5">{item.price}</span>
                         </div>
-                        <button style={{ marginLeft: "-600px", padding: "15px" }} className='btn btn-outline-dark'>View More <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                    ))}
+                </div>
+
+                <div className="mt-5">
+                    <h4 className="text-danger">View All Products</h4>
+                </div>
+            </div>
+
+            <div className="container text-center py-5">
+                <h2>Featured Projects</h2>
+                <div className="row mt-4">
+                    <div className="col-md-6 mb-4 mb-md-0">
+                        <img className='img-fluid' src={Image} alt="" />
+                    </div>
+                    <div className="col-md-6 text-start">
+                        <h3>Online Food Delivery System</h3>
+                        <hr className="border-danger w-25" />
+                        <h6 className="text-muted">WEB DEVELOPER PROJECT</h6>
+                        <p>Looking to create a food delivery system website for your eatery? Well, look no further with our food delivery system kit...</p>
+                        <span className="text-danger fs-5">3000 rs</span><br />
+                        <button className='btn btn-outline-dark mt-2'>View More <i className="fa-solid fa-arrow-right ms-2"></i></button>
                     </div>
                 </div>
             </div>
 
-
-            {/* book section */}
-            <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginTop: "200px"
-            }}>
-                <div style={{
-                    backgroundColor: '#FCEBEA',
-                    width: '85%',
-                    height: '500px'
-                }}>
-                    <div className="row">
-                        <div className="col">
-                            <p style={{ marginLeft: "200px", marginTop: "100px", fontSize: "40px" }}>All books are 50% off now!<br />
-                                Don't miss such a deal!</p>
-                            <p style={{ textAlign: "justify", marginLeft: "190px", marginRight: "30px" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos odit, modi necessitatibus totam harum adipisci quo, facilis.</p>
-
-                            <div style={{ gap: "20px" }} className='d-flex justify-content-center align-items-center'>
-                                <div> <span style={{ color: 'red', fontSize: "20px" }}>768</span> <br /> DAYS</div>
-                                <div><span style={{ color: 'red', fontSize: "20px" }}>01</span> <br />HOURS</div>
-                                <div><span style={{ color: 'red', fontSize: "20px" }}>27</span> <br />MINT</div>
-                                <div><span style={{ color: 'red', fontSize: "20px" }}>65</span> <br />SEC</div>
-                            </div>
-
+            <div className="container my-5">
+                <div className="row bg-light py-5 rounded align-items-center">
+                    <div className="col-md-6 text-center text-md-start px-5">
+                        <h2>All books are 50% off now!<br />Don't miss such a deal!</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos odit, modi necessitatibus totam...</p>
+                        <div className="d-flex justify-content-center justify-content-md-start gap-4 mt-3 flex-wrap">
+                            <div><span className="text-danger fs-5">768</span><br />DAYS</div>
+                            <div><span className="text-danger fs-5">01</span><br />HOURS</div>
+                            <div><span className="text-danger fs-5">27</span><br />MINT</div>
+                            <div><span className="text-danger fs-5">65</span><br />SEC</div>
                         </div>
-                        <div className="col">
-                            <img style={{ marginTop: "80px" }} className='img-fluid' src={book} alt="" />
-                        </div>
+                    </div>
+                    <div className="col-md-6 text-center mt-4 mt-md-0">
+                        <img className='img-fluid' src={book} alt="" />
                     </div>
                 </div>
             </div>
 
-            {/* article section */}
-            <div style={{
-                marginTop: "100px"
-            }}>
-                <h1 style={{ marginLeft: "700PX" }}> Latest Articles</h1>
-
-
-                <div className='d-flex justify-content-center align-items-center mt-5 gap-5'>
-
-                    <div>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={artOne} />
+            <div className="text-center mt-5">
+                <h1>Latest Articles</h1>
+                <div className='d-flex justify-content-center flex-wrap gap-4 mt-4'>
+                    {[artOne, artTwo, artThree].map((img, i) => (
+                        <Card key={i} style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={img} />
                             <Card.Body>
                                 <span style={{ color: "#926F34" }}>2 Aug, 2021</span>
-                                <Card.Text>
-                                    Reading Books Always Makes The Moments Happy
-                                </Card.Text>
-
-                                {/* Social Icons - aligned to the right */}
-                                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
-                                    <FaFacebookF style={{ cursor: 'pointer', color: '#3b5998' }} />
-                                    <FaTwitter style={{ cursor: 'pointer', color: '#1da1f2' }} />
-                                    <FaInstagram style={{ cursor: 'pointer', color: '#e1306c' }} />
+                                <Card.Text>Reading Books Always Makes The Moments Happy</Card.Text>
+                                <div className='d-flex justify-content-end gap-2'>
+                                    <FaFacebookF className='text-primary' />
+                                    <FaTwitter className='text-info' />
+                                    <FaInstagram className='text-danger' />
                                 </div>
                             </Card.Body>
                         </Card>
-                    </div>
-
-
-                    <div>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={artTwo} />
-                            <Card.Body>
-                                <span style={{ color: "#926F34" }}>2 Aug, 2021</span>
-                                <Card.Text>
-                                    Reading Books Always Makes The Moments Happy
-                                </Card.Text>
-
-                                {/* Social Icons - aligned to the right */}
-                                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
-                                    <FaFacebookF style={{ cursor: 'pointer', color: '#3b5998' }} />
-                                    <FaTwitter style={{ cursor: 'pointer', color: '#1da1f2' }} />
-                                    <FaInstagram style={{ cursor: 'pointer', color: '#e1306c' }} />
-                                </div>
-                            </Card.Body>
-                        </Card>
-                    </div>
-
-
-                    <div>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={artThree} />
-                            <Card.Body>
-                                <span style={{ color: "#926F34" }}>2 Aug, 2021</span>
-                                <Card.Text>
-                                    Reading Books Always Makes The Moments Happy
-                                </Card.Text>
-
-                                {/* Social Icons - aligned to the right */}
-                                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
-                                    <FaFacebookF style={{ cursor: 'pointer', color: '#3b5998' }} />
-                                    <FaTwitter style={{ cursor: 'pointer', color: '#1da1f2' }} />
-                                    <FaInstagram style={{ cursor: 'pointer', color: '#e1306c' }} />
-                                </div>
-                            </Card.Body>
-                        </Card>
-                    </div>
-
+                    ))}
                 </div>
-
-                <button style={{ marginLeft: "700px", marginTop: "100px" }} className='btn btn-outline-dark p-2'>READ ALL ARTICLES <i class="fa-solid fa-arrow-right ms-2"></i></button>
-
+                <button className='btn btn-outline-dark mt-5'>READ ALL ARTICLES <i className="fa-solid fa-arrow-right ms-2"></i></button>
             </div>
-            <Footer/>
+
+            <Footer />
         </>
-    )
+    );
 }
 
-export default Home
+export default Home;
